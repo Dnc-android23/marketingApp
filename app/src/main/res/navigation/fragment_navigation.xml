@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_navigation"
+    app:startDestination="@id/targetingSpecifics">
+
+    <fragment
+        android:id="@+id/targetingSpecifics"
+        android:name="com.dnc.marketingapp.presentation.ui.targetingspecifics.TargetingSpecificsFragment"
+        android:label="fragment_targeting_specifics"
+        tools:layout="@layout/targeting_specifics_fragment">
+        <action
+            android:id="@+id/action_targetingSpecifics_to_channels"
+            app:destination="@id/channels"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/channels"
+        android:name="com.dnc.marketingapp.presentation.ui.channels.ChannelsFragment"
+        android:label="fragment_channels"
+        tools:layout="@layout/channels_fragment">
+        <action
+            android:id="@+id/action_channels_to_campaigns"
+            app:destination="@id/campaigns"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/campaigns"
+        android:name="com.dnc.marketingapp.presentation.ui.campaigns.CampaignsDetailsFragment"
+        android:label="fragment_campaigns"
+        tools:layout="@layout/campaign_details_fragment">
+        <action
+            android:id="@+id/action_campaigns_to_reviewSelection"
+            app:destination="@id/reviewSelection"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/reviewSelection"
+        android:name="com.dnc.marketingapp.presentation.ui.reviewselection.ReviewCampaignFragment"
+        android:label="fragment_review_campaign"
+        tools:layout="@layout/review_campaign_fragment"/>
+</navigation>

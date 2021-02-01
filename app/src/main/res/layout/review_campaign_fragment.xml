@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/ic_background_blurred">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/header_layout_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corners_layout"
+        android:layout_margin="@dimen/margin_medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.dnc.marketingapp.presentation.ui.custom.CustomCounterView
+            android:id="@+id/screen_counter"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintTop_toBottomOf="@id/screen_counter"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/campaign_review_title"
+            android:textColor="@color/white"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/round_corners_transparent_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_layout_container"
+        android:layout_marginBottom="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_margin="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/campaign_title"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/item_view_height"
+            android:background="@color/white"
+            android:textSize="@dimen/text_title"
+            android:textColor="@color/darkGrey"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/margin_medium"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Facebook Campaign" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/close_campaign_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_nav_close"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:layout_constraintBottom_toBottomOf="@+id/campaign_title"
+            app:layout_constraintEnd_toEndOf="@+id/campaign_title"
+            app:layout_constraintTop_toTopOf="@+id/campaign_title" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/campaign_details"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/text_medium"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/margin_small"
+            android:layout_marginEnd="@dimen/margin_small"
+            app:layout_constraintTop_toBottomOf="@+id/campaign_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Lorem ipsum sin dolor Lorem ipsum sin dolor Lorem ipsum sin dolor Lorem ipsum sin dolor Lorem ipsum sin dolor" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/listing_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="@string/listing_label"
+            android:textAlignment="center"
+            android:textColor="@color/labelColor"
+            android:textSize="@dimen/text_small"
+            android:background="@color/lightGrey"
+            android:layout_marginTop="@dimen/margin_small"
+            app:layout_constraintEnd_toStartOf="@+id/vertical_guideline3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/campaign_details" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/optimization_no_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:maxLines="2"
+            android:background="@color/lightGrey"
+            android:text="@string/optimization_label"
+            android:textAlignment="center"
+            android:textColor="@color/labelColor"
+            android:textSize="@dimen/text_small"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guideline7"
+            app:layout_constraintStart_toEndOf="@+id/vertical_guideline3"
+            app:layout_constraintTop_toBottomOf="@+id/campaign_details" />
+
+        <View
+            android:id="@+id/separator_listings_optimizations"
+            android:layout_width="@dimen/divider_height"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:background="@color/mediumGrey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/vertical_guideline7"
+            app:layout_constraintTop_toBottomOf="@+id/campaign_details"
+            app:layout_constraintBottom_toBottomOf="@id/listing_text"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/listing_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/darkGrey"
+            android:textStyle="bold"
+            android:background="@color/lightGrey"
+            app:layout_constraintEnd_toEndOf="@+id/listing_label"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/listing_label"
+            tools:text="2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/optimization_no_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/darkGrey"
+            android:background="@color/lightGrey"
+            app:layout_constraintBottom_toBottomOf="@+id/listing_text"
+            app:layout_constraintEnd_toEndOf="@id/vertical_guideline7"
+            app:layout_constraintStart_toEndOf="@+id/listing_text"
+            app:layout_constraintTop_toBottomOf="@id/optimization_no_label"
+            tools:text="2" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/price_text"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:maxLines="2"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:textColor="@color/darkGrey"
+            android:background="@color/lightGrey"
+            app:layout_constraintBottom_toBottomOf="@+id/optimization_no_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/vertical_guideline7"
+            app:layout_constraintTop_toTopOf="@id/optimization_no_label"
+            tools:text="200 EUR" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guideline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.3" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/vertical_guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.7" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/send_campaign_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/lightBlue"
+            android:text="@string/submit_campaign"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

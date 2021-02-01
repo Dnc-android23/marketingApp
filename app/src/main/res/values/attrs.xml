@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CustomCounterView">
+        <attr name="iconFirst" format="reference"/>
+        <attr name="iconSecond" format="reference"/>
+        <attr name="iconThird" format="reference"/>
+        <attr name="iconFourth" format="reference"/>
+    </declare-styleable>
+
+</resources>

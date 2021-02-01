@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Elsewher</string>
+    <string name="app_name_long">Marketing Campaigns</string>
+    <string name="no_internet">No Internet connection</string>
+    <string name="no_internet_message">Please make sure Wi-Fi or cellular data is turned on, then try again.</string>
+    <string name="no_targeting_specifics">There are no targeting specifics found at this moment. Please try again later.</string>
+    <string name="toolbar_title">Targeting specifics</string>
+    <string name="continue_button_string">Continue</string>
+    <string name="targeting_specifics_error_title">Error</string>
+    <string name="targeting_specifics_error_message">You must select at least one option! Please select your options and try again.</string>
+    <string name="targeting_specifics_title">Select your targeting specifics</string>
+    <string name="channesl_title">Select your channel</string>
+    <string name="campaign_details_title">Select your campaign</string>
+    <string name="optimization_label">No. of optimizations</string>
+    <string name="listing_label">No. of listing</string>
+    <string name="email_failed_message">Couldn\'t open email application</string>
+    <string name="action_failed_title">Something went wrong</string>
+    <string name="email_subject">Check this campaign from %1$s</string>
+    <string name="email_body">You can take advantage of all these options %1$s for the price of %2$s.</string>
+    <string name="email_chooser">Choose email client</string>
+    <string name="close_navigation_menu">Close</string>
+    <string name="button_back_alert">Back</string>
+    <string name="search">Search</string>
+    <string name="select_campaign">Select campaign</string>
+    <string name="price_label">Price</string>
+    <string name="campaign_review_title">Review your campaign</string>
+    <string name="submit_campaign">Submit</string>
+    <string name="campaign">%1$s Campaign</string>
+    <string name="campaigns_details_failed_message">Something went wrong while trying to get the campaigns details. Please try again. </string>
+
+</resources>
